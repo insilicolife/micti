@@ -31,4 +31,4 @@ Installation
 
    ::
 
-   $from MICTI import *
+   $from MICTI import MARKER
