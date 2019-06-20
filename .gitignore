@@ -1,0 +1,27 @@
+Clustering methods in single-RNAseq data.ipynb
+data/analysis_csv 3                         
+data/GSE119945_gene_annotate.csv.gz       
+data/GSE81861_Cell_Line_FPKM.csv.gz                                              
+data/mart_export_stable_genes_human.txt  
+data/pancrease_data.csv                 
+data/cd4_t_helper_metrics_summary.csv       
+data/GSE119945_gene_count.txt.gz          
+data/GSE81861_CRC_NM_all_cells_FPKM.csv.gz                                       
+data/mart_export_stable_genes.txt        
+data/pancrease_metadata.csv             
+data/scSimulated_data_withSymsim.txt
+data/GSE120629_geo_submission_counts.csv  
+data/GSE81861_CRC_tumor_all_cells_FPKM.csv.gz                                    
+data/pancreas_v3_files                  
+data/scSimulated_Metadata_withsplatter.txt
+data/E-MTAB-6678_arrayexpress_ss2_meta.txt  
+data/GSE81682_HTSeq_counts.txt            
+data/mouse_mart_export.txt               
+data/scRNASimulated.txt                 
+data/GSE119945_cell_annotate.csv.gz         
+data/GSE81682_metadata.txt                
+data/mart_export_mouse_stable_gene.txt                                           
+data/pancease_integrated_data.csv        
+data/scSimulated_data_withsplatter.txt  
+data/simulated_simple_splat_lun_data.txt
+GSE86469_pancrese_data.ipynb
