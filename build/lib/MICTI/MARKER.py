@@ -2,9 +2,11 @@ import pandas as pa
 import numpy as np
 from scipy.sparse import csr_matrix, isspmatrix
 from MICTI import MARKERS
+from MICTI import normalize
+from MICTI import GeoMinner
 import sys
 
-def MICTI(sparceMatrix,geneNames,cellNames,k=None,cluster_assignment=None, th=0,normalized=True, ensembel=False, organisum="hsapiens"):
+def MICTI(sparceMatrix,geneNames,cellNames,k=None,cluster_assignment=None, th=0,normalized=True, UMI=False, ensembel=False, organisum="hsapiens"):
     #check sparcity of the matrix
     if(sparceMatrix.shape[0]!=len(cellNames)):
         print("The number of cells and the given cell names does not match")
@@ -33,10 +35,15 @@ def MICTI(sparceMatrix,geneNames,cellNames,k=None,cluster_assignment=None, th=0,
                 sparceMatrix=csr_matrix(sparceMatrix)
         else:
             if not isspmatrix(sparceMatrix):
-                sparceMatrix=normalizeUMIWithscalefactor(sparceMatrix)
+                if(UMI):
+                    sparceMatrix=normalize.normalizeUMIWithscalefactor(sparceMatrix)
+                else:
+                    sparceMatrix,geneNames=normalize.getTPM(sparceMatrix.T,gene_Names=geneNames,ensembol_gene=ensembel)
+                    #print(sparceMatrix.shape)
+                    
                 sparceMatrix=csr_matrix(sparceMatrix)
             else:
-                sparceMatrix=normalizeUMIWithscalefactor(sparceMatrix.toarray())
+                sparceMatrix=normalize.normalizeUMIWithscalefactor(sparceMatrix)
                 sparceMatrix=csr_matrix(sparceMatrix)
         #creat micti object
         micti_obj=MARKERS.MICTI(sparceMatrix,geneNames,cellNames,k=kk,cluster_label=cluster_labels,cluster_assignment=labelArray, th=th, ensembel=ensembel, organisum=organisum)
