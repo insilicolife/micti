@@ -13,7 +13,7 @@ setuptools.setup(
     long_description_content_type="text/markdown",
     url="https://github.com/insilicolife/micti",
     packages=setuptools.find_packages(), 
-    install_requires=['numpy', 'pandas','scipy','scikit-learn', 'matplotlib','mpl_toolkits','pylab','gensim', 'gprofiler', 'seaborn','pyensembl', 'bs4','urllib','requests','json',"setuptools"],
+    install_requires=['numpy', 'pandas','scipy','scikit-learn', 'matplotlib','mpl_toolkits','pylab','gensim', 'gprofiler', 'seaborn','pyensembl', 'bs4','requests'],
     classifiers=(
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",

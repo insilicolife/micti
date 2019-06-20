@@ -4,7 +4,7 @@ User's Guide
 Creat MICTI Object
 ------------------
 
-	$MICTI(data,geneNames,cellNames,k=None,cluster_label=None,cluster_assignment=None, th=0,seed=None, ensembel=False, organisum="hsapiens")
+	$MICTI_obj=MARKER.MICTI(data,geneNames,cellNames,k=None,cluster_label=None,cluster_assignment=None, th=0,seed=None, ensembel=False, organisum="hsapiens")
 
 
 Input
@@ -54,7 +54,7 @@ The output is the MICTI object
 Data visualisation
 ------------------
 
-``$MICTI.get_Visualization(dim=2,method="tsne")``
+``$MICTI_obj.get_Visualization(dim=2,method="tsne")``
 
 Input
 ~~~~~
@@ -74,7 +74,7 @@ Returns none. Desplays the lower dimensional representation of the dataset
 Clustering cells
 ----------------
 
-``$MICTI.cluster_cells(numberOfCluster, method="kmeans", maxiter=500)``
+``$MICTI_obj.cluster_cells(numberOfCluster, method="kmeans", maxiter=500)``
 
 Input
 ~~~~~
@@ -99,7 +99,7 @@ Returns None, assigning each cells into k clusters
 Cell-type marker genes
 ----------------------
 
-``$MICTI.marker_gene_FDR_p_value(clusterNo)``
+``$MICTI_obj.marker_gene_FDR_p_value(clusterNo)``
 
 Input
 ~~~~~
@@ -116,7 +116,7 @@ Returns a table with Z-score, p-value and FDR p-value for each of the genes.
 significant cluster markers
 ---------------------------
 
-``$MICTI.get_markers_by_Pvalues_and_Zscore(clusterNo,threshold_pvalue=.01, threshold_z_score=0)``
+``$MICTI_obj.get_markers_by_Pvalues_and_Zscore(clusterNo,threshold_pvalue=.01, threshold_z_score=0)``
 
 Input
 ~~~~~
@@ -127,7 +127,7 @@ The cluster number. Each clusters are identified by number. For example, if ther
 
 *threshold_pvalue*
 """"""""""""""""""
-The threshold FDR p-value. Genes/Markers with less than the threshold FDR p-value are selected.
+The threshold Adj p-value. Genes/Markers with less than the threshold Adj p-value are selected.
 
 *threshold_z_score*
 """""""""""""""""""
@@ -136,12 +136,12 @@ The threshold Z-scores. Genes/markers with greater than the threshold z-score ar
 Output
 ~~~~~~
 
-Returns a table with Z-score, p-value and FDR p-value of significantlly cell-type/cluster marker genes filtered by FDR Pvalue and Z-score.
+Returns a table with Z-score, p-value and Adj p-value of significantlly cell-type/cluster marker genes filtered by Adj P-value and Z-score.
 
 Gene-list enrichment analysis
 -----------------------------
 
-``$MICTI.get_sig_gene_over_representation()``
+``$MICTI_obj.get_sig_gene_over_representation()``
 
 Input
 ~~~~~
