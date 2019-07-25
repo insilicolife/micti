@@ -3,14 +3,9 @@ pandas
 scipy
 scikit-learn
 matplotlib
-mpl_toolkits
-pylab
 gensim
 gprofiler
 seaborn
 pyensembl
 bs4
-urllib
 requests
-json
-setuptools

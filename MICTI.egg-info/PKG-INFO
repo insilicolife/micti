@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: MICTI
-Version: 0.1.3
+Version: 0.1.4
 Summary: Feature extraction approach in single-cell gene expression profiling for cell-type marker identification.
 Home-page: https://github.com/insilicolife/micti
 Author: Nigatu Ayele
