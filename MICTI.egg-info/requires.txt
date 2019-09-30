@@ -9,3 +9,4 @@ seaborn
 pyensembl
 bs4
 requests
+html5lib

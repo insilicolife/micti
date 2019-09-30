@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setuptools.setup(
     name="MICTI",
-    version="0.1.4",
+    version="0.1.5",
     author="Nigatu Ayele",
     author_email="naodm2006awet4@gmail.com",
     description="Feature extraction approach in single-cell gene expression profiling for cell-type marker identification.",
