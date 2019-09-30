@@ -199,13 +199,13 @@ class MICTI:
 
         
     def get_cluster_data(self, cluster_number):
-        return self.data.toarray()[np.in1d(np.array(self.cluster_assignment), cluster_number),:], self.cellNames[np.in1d(np.array(self.cluster_assignment), cluster_number)]
+        return self.data.toarray()[np.in1d(self.cluster_assignment, cluster_number),:], self.cellNames[np.in1d(self.cluster_assignment, cluster_number)]
     
     def get_cluster_ICF_data(self, cluster_number):
-        return self.ICF(self.data[np.in1d(np.array(self.cluster_assignment), cluster_number),:])
+        return self.ICF(self.data[np.in1d(self.cluster_assignment, cluster_number),:])
     
     def get_cluster_CF_data(self,cluster_number):
-        return self.CF(self.data[np.in1d(np.array(self.cluster_assignment), cluster_number),:]) 
+        return self.CF(self.data[np.in1d(self.cluster_assignment, cluster_number),:]) 
     
     def get_selected_cluster_marker(self, clusters):
         
